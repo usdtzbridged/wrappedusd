@@ -1,0 +1,451 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wrapped USDT (wUSDT) - Solana Token Bridge</title>
+    <meta name="description" content="Wrapped Tether (wUSDT) is a tokenized version of Tether (USD₮) on the Solana blockchain. Trade, hold, and transfer wUSDT tokens with industry-leading security.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <div class="logo">
+                    <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+                    </svg>
+                </div>
+                <span class="brand-text">wUSDT</span>
+            </div>
+            
+            <div class="nav-links">
+                <a href="#overview" class="nav-link">Overview</a>
+                <a href="#chains" class="nav-link">Chains</a>
+                <a href="#bridge" class="nav-link">Bridge</a>
+                <a href="#security" class="nav-link">Security</a>
+                <a href="#docs" class="nav-link">Docs</a>
+                <a href="#team" class="nav-link">Team</a>
+            </div>
+            
+            <button class="mobile-menu-btn" onclick="toggleMobileMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    Wrapped USDT
+                    <span class="text-gradient">Solana Token</span>
+                </h1>
+                <p class="hero-description">
+                    Wrapped Tether (wUSDT) is a tokenized version of Tether (USD₮) on the Solana blockchain. 
+                    Trade, hold, and transfer wUSDT tokens with industry-leading security and verification.
+                </p>
+                
+                <div class="price-display">
+                    <div class="price-card">
+                        <div class="price-value" id="current-price">$0.1273</div>
+                        <div class="price-label">Current Price</div>
+                    </div>
+                    <div class="price-card">
+                        <div class="price-change" id="price-change">+62.87%</div>
+                        <div class="price-label">24h Change</div>
+                    </div>
+                </div>
+                
+                <div class="hero-buttons">
+                    <button class="btn btn-primary" onclick="scrollToSection('bridge')">
+                        Start Trading
+                    </button>
+                    <button class="btn btn-secondary" onclick="scrollToSection('docs')">
+                        Learn More
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Token Overview -->
+    <section id="overview" class="token-overview">
+        <div class="container">
+            <div class="section-header">
+                <h2>Token Overview</h2>
+                <p>Wrapped Tether (wUSDT) is a tokenized version of Tether (USD₮) on the Solana blockchain. Total supply: 10B | Circulating: 9.99B | Locked: 2B tokens</p>
+            </div>
+            
+            <div class="features-grid">
+                <div class="feature-card">
+                    <i class="fas fa-shield-alt feature-icon"></i>
+                    <div class="feature-title">10B</div>
+                    <div class="feature-description">Total Supply</div>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-coins feature-icon"></i>
+                    <div class="feature-title">9.99B</div>
+                    <div class="feature-description">Circulating Supply</div>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-lock feature-icon"></i>
+                    <div class="feature-title">2B</div>
+                    <div class="feature-description">Locked Tokens</div>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-users feature-icon"></i>
+                    <div class="feature-title">121</div>
+                    <div class="feature-description">Token Holders</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works -->
+    <section class="how-it-works">
+        <div class="container">
+            <div class="section-header">
+                <h2>How It Works</h2>
+                <p>Wormhole follows a 'lock and mint' mechanism to perform secure cross-chain transactions.</p>
+            </div>
+            
+            <div class="steps-grid">
+                <div class="step">
+                    <div class="step-icon">
+                        <i class="fas fa-lock"></i>
+                    </div>
+                    <h3>1. Lock Tokens</h3>
+                    <p>Your USDT tokens are locked in a smart contract on the source blockchain network.</p>
+                </div>
+                <div class="step">
+                    <div class="step-icon">
+                        <i class="fas fa-exchange-alt"></i>
+                    </div>
+                    <h3>2. Cross-Chain Transfer</h3>
+                    <p>Wormhole's Guardian network validates the transaction and facilitates the cross-chain transfer.</p>
+                </div>
+                <div class="step">
+                    <div class="step-icon">
+                        <i class="fas fa-coins"></i>
+                    </div>
+                    <h3>3. Mint on Destination</h3>
+                    <p>Wrapped USDT tokens are minted on the destination chain, representing your locked tokens.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bridge Interface -->
+    <section id="bridge" class="bridge-interface">
+        <div class="container">
+            <div class="section-header">
+                <h2>Token Trading</h2>
+                <p>Trade wUSDT tokens on Solana with live market data and direct access to trading platforms.</p>
+            </div>
+            
+            <div class="bridge-card">
+                <div class="bridge-content">
+                    <div class="token-info-grid">
+                        <div class="token-info-card">
+                            <div class="token-info-header">
+                                <i class="fas fa-chart-line"></i>
+                                <h3>Current Price</h3>
+                            </div>
+                            <div class="token-price" id="bridge-price">$0.1273</div>
+                            <div class="token-change" id="bridge-change">+62.87% 24h</div>
+                        </div>
+                        
+                        <div class="token-info-card">
+                            <div class="token-info-header">
+                                <i class="fas fa-chart-bar"></i>
+                                <h3>Market Stats</h3>
+                            </div>
+                            <div class="stats-list">
+                                <div class="stat-item">
+                                    <span>Market Cap:</span>
+                                    <span>$1.27B</span>
+                                </div>
+                                <div class="stat-item">
+                                    <span>24h Volume:</span>
+                                    <span>$45.2M</span>
+                                </div>
+                                <div class="stat-item">
+                                    <span>Holders:</span>
+                                    <span>121</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="trading-buttons">
+                        <button class="btn btn-primary" onclick="openTrading('jupiter')">
+                            <i class="fas fa-rocket"></i>
+                            Trade on Jupiter
+                        </button>
+                        <button class="btn btn-secondary" onclick="openTrading('raydium')">
+                            <i class="fas fa-water"></i>
+                            Trade on Raydium
+                        </button>
+                    </div>
+                    
+                    <div class="contract-info">
+                        <h4>Contract Address:</h4>
+                        <div class="contract-address" onclick="copyToClipboard('57GajvDHazpCCCCpKgiHppJJf5cjwHWancCZZLPoeFMj')">
+                            57GajvDHazpCCCCpKgiHppJJf5cjwHWancCZZLPoeFMj
+                            <i class="fas fa-copy"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Security Features -->
+    <section id="security" class="security-features">
+        <div class="container">
+            <div class="section-header">
+                <h2>Security Features</h2>
+                <p>Built with industry-leading security protocols and multi-layer validation systems.</p>
+            </div>
+            
+            <div class="security-grid">
+                <div class="security-card">
+                    <div class="security-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Guardian Network</h3>
+                    <p>Secured by 19 of the world's top validator companies running full nodes across all supported blockchains.</p>
+                </div>
+                <div class="security-card">
+                    <div class="security-icon">
+                        <i class="fas fa-file-signature"></i>
+                    </div>
+                    <h3>Multi-Signature Validation</h3>
+                    <p>Requires 13 out of 19 Guardian signatures for transaction validation, ensuring maximum security.</p>
+                </div>
+                <div class="security-card">
+                    <div class="security-icon">
+                        <i class="fas fa-users-cog"></i>
+                    </div>
+                    <h3>Smart Contract Verification</h3>
+                    <p>All smart contracts are verified and audited, with message format and signature verification.</p>
+                </div>
+            </div>
+            
+            <div class="security-stats">
+                <div class="stat">
+                    <div class="stat-value">19</div>
+                    <div class="stat-label">Guardian Nodes</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-value">13/19</div>
+                    <div class="stat-label">Required Signatures</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-value">40+</div>
+                    <div class="stat-label">Supported Chains</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-value">$50B+</div>
+                    <div class="stat-label">Total Volume</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Documentation -->
+    <section id="docs" class="documentation">
+        <div class="container">
+            <div class="section-header">
+                <h2>Documentation & Resources</h2>
+                <p>Get started with comprehensive guides and developer resources for Wrapped USDT integration.</p>
+            </div>
+            
+            <div class="docs-grid">
+                <div class="doc-card">
+                    <div class="doc-icon">
+                        <i class="fas fa-book-open"></i>
+                    </div>
+                    <h3>Getting Started</h3>
+                    <p>Learn how to use Wrapped USDT for cross-chain transfers and DeFi applications.</p>
+                    <button class="btn btn-link" onclick="openLink('#')">
+                        Read Guide
+                        <i class="fas fa-arrow-right"></i>
+                    </button>
+                </div>
+                <div class="doc-card">
+                    <div class="doc-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h3>Developer API</h3>
+                    <p>Integrate Wormhole bridge functionality into your applications with our SDK.</p>
+                    <button class="btn btn-link" onclick="openLink('#')">
+                        View API
+                        <i class="fas fa-arrow-right"></i>
+                    </button>
+                </div>
+                <div class="doc-card">
+                    <div class="doc-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Community</h3>
+                    <p>Join our community for support, updates, and discussions about Wrapped USDT.</p>
+                    <button class="btn btn-link" onclick="openLink('#')">
+                        Join Discord
+                        <i class="fas fa-arrow-right"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section id="team" class="team-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Team</h2>
+                <p>Meet our experienced team members who manage the wUSDT project</p>
+            </div>
+            
+            <div class="team-grid">
+                <div class="team-card">
+                    <div class="team-header">
+                        <i class="fas fa-user-tie"></i>
+                    </div>
+                    <div class="team-content">
+                        <div class="team-avatar">
+                            <img src="https://via.placeholder.com/80x80?text=CM" alt="Community Manager">
+                        </div>
+                        <h3>Community Manager</h3>
+                        <p>@wrappedusdt</p>
+                        <p>Building and nurturing our growing community of wUSDT users and developers.</p>
+                        <div class="team-social">
+                            <a href="https://x.com/wrappedwusdt" class="social-link">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a href="https://t.me/wrappedusdt" class="social-link">
+                                <i class="fab fa-telegram"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="team-card">
+                    <div class="team-header">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <div class="team-content">
+                        <div class="team-avatar">
+                            <img src="https://via.placeholder.com/80x80?text=LD" alt="Lead Developer">
+                        </div>
+                        <h3>Lead Developer</h3>
+                        <p>@dev_wusdt</p>
+                        <p>Core blockchain developer with expertise in Solana and cross-chain protocols.</p>
+                        <div class="team-social">
+                            <a href="https://github.com/wrappedusdtt" class="social-link">
+                                <i class="fab fa-github"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="team-card">
+                    <div class="team-header">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <div class="team-content">
+                        <div class="team-avatar">
+                            <img src="https://via.placeholder.com/80x80?text=PM" alt="Project Manager">
+                        </div>
+                        <h3>Project Manager</h3>
+                        <p>@pm_wusdt</p>
+                        <p>Experienced project manager overseeing development and strategic partnerships.</p>
+                        <div class="team-social">
+                            <a href="https://medium.com/@wrappedusdt" class="social-link">
+                                <i class="fab fa-medium"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <i class="fas fa-exchange-alt"></i>
+                        <span>wUSDT</span>
+                    </div>
+                    <p>Wrapped Tether (wUSDT) is a tokenized version of Tether (USD₮) on the Solana blockchain.</p>
+                    <div class="social-links">
+                        <a href="https://x.com/wrappedwusdt" class="social-link">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="https://t.me/wrappedusdt" class="social-link">
+                            <i class="fab fa-telegram"></i>
+                        </a>
+                        <a href="https://github.com/wrappedusdtt" class="social-link">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://medium.com/@wrappedusdt" class="social-link">
+                            <i class="fab fa-medium"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>Product</h4>
+                        <ul>
+                            <li><a href="#bridge">Bridge</a></li>
+                            <li><a href="#chains">Supported Chains</a></li>
+                            <li><a href="#overview">Token Info</a></li>
+                            <li><a href="#security">Security</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-column">
+                        <h4>Resources</h4>
+                        <ul>
+                            <li><a href="#docs">Documentation</a></li>
+                            <li><a href="#">API Reference</a></li>
+                            <li><a href="#">Tutorials</a></li>
+                            <li><a href="#">FAQ</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-column">
+                        <h4>Company</h4>
+                        <ul>
+                            <li><a href="#">About</a></li>
+                            <li><a href="#">Terms</a></li>
+                            <li><a href="#">Privacy</a></li>
+                            <li><a href="#">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 Wrapped USDT. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
